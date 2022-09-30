@@ -1,0 +1,11 @@
+.circle {
+    fill: #1650ff;
+}
+
+.circle:hover {
+    fill: #84a0f4
+}
+/* 
+.rect {
+    fill: orange;
+} */
