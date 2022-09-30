@@ -22,21 +22,24 @@ function renderBuildings(data) {
         .attr("height", 20)
         .attr('stroke', 'black')
         .on("click", function(event, d) {
-            //do something
+            d3.select("image_text")
+                .text(function(d, i) {
+                    return "img\${i}"
+                });
         });
 
-        // let text = svg.
-        // selectAll(".text")
-        // .data(data)
-        // .enter()
-        // .append("text")
-        // .attr("class", "small")
-        // .attr("font-size", 11)
-        // .attr("text-anchor", "end")
-        // .attr("x", function(d){
-        //     return 10;
-        // })
-        // .attr("y", function(d){
-        //     return 10;
-        // });
+    let text = svg2.
+        selectAll(".text")
+        .data(data)
+        .enter()
+        .append("text")
+        .attr("class", "small")
+        .attr("font-size", 11)
+        .attr("text-anchor", "end")
+        .attr("x", function(d){
+            return 10;
+        })
+        .attr("y", function(d){
+            return 10;
+        });
 }
