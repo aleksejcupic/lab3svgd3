@@ -1,6 +1,6 @@
 const width = 700;
 const height = 550;
-const svg = d3.select('.population-plot')
+var svg = d3.select('.population-plot')
 	.append('svg')
     .attr('width', width)
     .attr('height', height);
@@ -12,10 +12,10 @@ function renderChart(data) {
         .enter()
         .append("circle")
         .attr("class", "circle")
-        .attr('cx', function (d){
+        .attr('cx', function (d) {
 		    return d.x;
 	    })
-        .attr("cy", function (d){
+        .attr("cy", function (d) {
 		    return d.y;
         })
         .attr("r", function(d) {
